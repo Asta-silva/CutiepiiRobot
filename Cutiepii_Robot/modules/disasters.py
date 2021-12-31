@@ -84,16 +84,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Titan Shifter")
+        message.reply_text("This member is already a Knight.")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested the Ackermans to promote a Royal Blood to Titan Shifter."
+        rt += "Requested to promote a Attacker to Knight."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested the Ackermans to promote a Garrison to Titan Shifter."
+        rt += "Requested to promote a Demi-Human to Knight."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -105,7 +105,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt
-        + "\nSuccessfully set Disaster level of {} to Titan Shifter!".format(
+        + "\nSuccessfully set Disaster level of {} Knight!".format(
             user_member.first_name,
         ),
     )
@@ -145,16 +145,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested the Ackermans to demote this Titan Shifter to Royal Blood"
+        rt += "Requested to demote this Knight to Attacker"
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Royal Blood.")
+        message.reply_text("This user is already a Attacker.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested the Ackermans to promote this Garrison to Royal Blood"
+        rt += "Requested to promote this Demi-Human to Attacker"
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -165,7 +165,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Royal Blood!",
+        rt + f"\n{user_member.first_name} was added as a Attacker!",
     )
 
     log_message = (
@@ -200,17 +200,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Titan Shifter, Demoting to Garrison."
+        rt += "This member is a Kinght, Demoting to Demi-Human."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Royal Blood, Demoting to Garrison."
+        rt += "This user is Attacker, Demoting to Demi-Humam."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Garrison.")
+        message.reply_text("This user is already a Demi-Human.")
         return ""
 
     data["whitelists"].append(user_id)
@@ -220,7 +220,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Garrison!",
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a Demi-Human!",
     )
 
     log_message = (
@@ -255,22 +255,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Titan Shifter, Demoting to Scout."
+        rt += "This member is a Knight, Demoting to Defender."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Royal Blood, Demoting to Scout."
+        rt += "This user is a Attacker, Demoting to Defender."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Garrison, Demoting to No Acces.."
+        rt += "This user is a Demi-Human, Demoting to Defender."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Scout.")
+        message.reply_text("This user is already a Defender.")
         return ""
 
     data["tigers"].append(user_id)
@@ -280,7 +280,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Scout!",
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a Attacker!",
     )
 
     log_message = (
@@ -544,19 +544,19 @@ def devlist(update: Update, context: CallbackContext):
     m.edit_text(reply, parse_mode=ParseMode.HTML)
 
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addtitanshifter"), addsudo, run_async=True)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addroyalblood"), addsupport, run_async=True)
-TIGER_HANDLER = CommandHandler(("addscout"), addtiger)
-WHITELIST_HANDLER = CommandHandler(("addgarrison", "addwhitelist"), addwhitelist, run_async=True)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removetitanshifter"), removesudo, run_async=True)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removeroyalblood"), removesupport, run_async=True)
-UNTIGER_HANDLER = CommandHandler(("removescout"), removetiger)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removegarrison"), removewhitelist, run_async=True)
-WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "garrisons"], whitelistlist, run_async=True)
-TIGERLIST_HANDLER = CommandHandler(["scouts"], tigerlist, run_async=True)
-SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "royalbloods"], supportlist, run_async=True)
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "titanshifters"], sudolist, run_async=True)
-DEVLIST_HANDLER = CommandHandler(["devlist", "ackermans"], devlist, run_async=True)
+SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo, run_async=True)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack"), addsupport, run_async=True)
+TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
+WHITELIST_HANDLER = CommandHandler(("adddemi", "addwhitelist"), addwhitelist, run_async=True)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "rmknight"), removesudo, run_async=True)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "rmattack"), removesupport, run_async=True)
+UNTIGER_HANDLER = CommandHandler(("rmdefend"), remotiger)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "rmdemi"), removewhitelist, run_async=True)
+WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "Demilist"], whitelistlist, run_async=True)
+TIGERLIST_HANDLER = CommandHandler(["defenders"], tigerlist, run_async=True)
+SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "attackers"], supportlist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "knights"], sudolist, run_async=True)
+DEVLIST_HANDLER = CommandHandler(["devlist", "healers"], devlist, run_async=True)
 
 
 dispatcher.add_handler(SUDO_HANDLER)
