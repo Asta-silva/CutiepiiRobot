@@ -150,7 +150,7 @@ if ENV:
 
     HELP_IMG = os.environ.get("HELP_IMG", True)
     GROUP_START_IMG = os.environ.get("GROUP_START_IMG", True)
-    CUTIEPII_PHOTO = os.environ.get("CUTIEPII_PHOTO", True)
+    Flare_PHOTO = os.environ.get("CUTIEPII_PHOTO", True)
     
     try:
         BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
