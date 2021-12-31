@@ -118,13 +118,13 @@ HELP_MSG = "Click the button below to get help manu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
     
 PM_START_TEXT = """
-────「 [Flare](https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg) 」────
-*Hola! {},*
-*I am an Anime themed advance group management bot with a lot of Sexy Features.*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
+────「 {} 」────
+*Hey! {},*
+* I am an Anime themed advance group management bot with a lots of Features.*
+➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities ××
+➖➖➖➖➖➖➖➖➖➖➖
+➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/55bc514a9fb63eaa200de.jpg) ××
 """
 
 GROUP_START_TEXT = """
