@@ -55,7 +55,7 @@ from Cutiepii_Robot import (
     EVENT_LOGS,
     HELP_IMG,
     GROUP_START_IMG,
-    CUTIEPII_PHOTO,
+    FLARE_PHOTO,
     dispatcher,
     StartTime,
     telethn,
@@ -96,26 +96,30 @@ from telethon import Button, events
 
 @telethn.on(events.NewMessage(pattern="/alive"))
 async def awake(event):
-  CUTIEPII = event.sender.first_name
-  CUTIEPII = "**♡ I,m Cutiepii Robot 愛** \n\n"
-  CUTIEPII += "**♡ I'm Working With Awesome Speed**\n\n"
-  CUTIEPII += "**♡ Cutiepii: LATEST Version**\n\n"
-  CUTIEPII += "**♡ My Creator:** [Rajkumar](t.me/Awesome_RJ)\n\n"
-  CUTIEPII += "**♡ python-Telegram-Bot: 13.7**\n\n"
-  CUTIEPII_BUTTON = [
+  ғʟᴀʀᴇ = event.sender.first_name
+  ғʟᴀʀᴇ = "**♡ ɪ,ᴍ ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
+  ғʟᴀʀᴇ += "**♡ ɪ'ᴍ ᴡᴏʀᴋɪɴɢ ᴡɪᴛʜ ғᴀsᴛᴇsᴛ sᴘᴇᴇᴅ**\n\n"
+  ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ**\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴍʏ ᴅᴀʀʟɪɴɢ:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴘʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ: 13.7**\n\n"
+  ғʟᴀʀᴇ = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
-          Button.url("📢 Updates", "https://t.me/Black_Knights_Union")
+          Button.url("📢 Updates", "https://t.me/Freia_Updates")
       ]
   ]
   await telethn.send_file(
       event.chat_id,
-      CUTIEPII_PHOTO,
-      caption = CUTIEPII,
-      buttons = CUTIEPII_BUTTON,
+      FLARE_PHOTO,
+      caption = ғʟᴀʀᴇ,
+      buttons = FLARE_BUTTON,
   )
 
-    
+GROUP_START_IMG = https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4
+
+FLARE_PHOTO = https://telegra.ph/file/2a171330f0ad1fc02465c.jpg
+
+
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -167,7 +171,7 @@ buttons = [
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
-                       InlineKeyboardButton(text="❔ Chit Chat", url="https://t.me/HindiKDrama"),
+                       InlineKeyboardButton(text="❔ Chit Chat", url="https://t.me/OtaKu_Gang1"),
                        InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
                      ],
                     [                  
@@ -176,7 +180,7 @@ buttons = [
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
                              text="📢 Updates",
-                             url="https://t.me/Black_Knights_Union")
+                             url="https://t.me/Freia_Updates")
                      ], 
     ]
 
@@ -319,7 +323,7 @@ def start(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="📢 Updates",
-                            url="https://telegram.dog/Black_Knights_Union",
+                            url="https://t.me/Freia_Updates",
                         ),
                     ]
                 ]
@@ -444,10 +448,10 @@ def help_button(update, context):
     except BadRequest:
         pass
 
-def cutiepii_callback_data(update, context):
+def flare_callback_data(update, context):
     query = update.callback_query
     uptime = get_readable_time((time.time() - StartTime))
-    if query.data == "cutiepii_":
+    if query.data == "flare_":
         query.message.edit_text(
             text="""CallBackQueriesData Here""",
             parse_mode=ParseMode.MARKDOWN,
@@ -455,12 +459,12 @@ def cutiepii_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="[► Back ◄]", callback_data="cutiepii_back")
+                    InlineKeyboardButton(text="[► Back ◄]", callback_data="flare_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "cutiepii_back":
+    elif query.data == "flare_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
                 PM_START_TEXT.format(
