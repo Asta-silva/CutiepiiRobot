@@ -702,6 +702,18 @@ def migrate_chats(update: Update, context: CallbackContext):
     raise DispatcherHandlerStop
     
 def main():
+
+    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
+        try:
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[hey! I am back from OYO!!](https://telegra.ph/file/926039375cac9825e1e58.jpg)", parse_mode=ParseMode.MARKDOWN)
+        except Unauthorized:
+            LOGGER.warning(
+                "Bot isnt able to send message to support_chat, go and check!",
+            )
+        except BadRequest as e:
+            LOGGER.warning(e.message)
+
+
     test_handler = DisableAbleCommandHandler("test", test, run_async=True)
     start_handler = DisableAbleCommandHandler("start", start, run_async=True)
 
