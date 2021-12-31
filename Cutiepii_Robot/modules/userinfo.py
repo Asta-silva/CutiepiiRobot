@@ -443,8 +443,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Black_Knights_Union)\n\n"
-            + "╘══「 by [Awesome RJ](https://github.com/Awesome-RJ) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Freia_Updates)\n\n"
+            + "╘══「 by [ᴀsᴛᴀ](https://github.com/Asta-silva) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -456,9 +456,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Black_Knights_Union)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates/5)\n\n"
                 )
-                + "╘══「 by [Awesome-RJ](https://github.com/Awesome-RJ) 」\n"
+                + "╘══「 by [Asta](https://github.com/Asta-silva) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
