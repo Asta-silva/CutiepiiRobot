@@ -286,7 +286,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested the Ackermans to demote this user to Civilian")
+        message.reply_text("Requested to demote this user to a Normal Human")
         DRAGONS.remove(user_id)
         data["sudos"].remove(user_id)
 
@@ -326,7 +326,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested the Ackermans to demote this user to Civilian")
+        message.reply_text("Requested to demote this Attacker to Normal users")
         DEMONS.remove(user_id)
         data["supports"].remove(user_id)
 
@@ -429,7 +429,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Wolves♠️:</b>\n"
+    reply = "<b>Known as Demi-Humans♠️:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
@@ -448,7 +448,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Tigers🔰:</b>\n"
+    reply = "<b>Known as Defenders🔰:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
@@ -469,7 +469,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
-    reply = "<b>Known Demons⭐:</b>\n"
+    reply = "<b>Known As Attackers👹:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -487,7 +487,7 @@ def sudolist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Dragons💥:</b>\n"
+    reply = "<b>known As Knights😈💥:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -505,7 +505,7 @@ def devlist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Black Knights Union Members⚡️:</b>\n"
+    reply = "<b>Jonny-sins list⚡️:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
