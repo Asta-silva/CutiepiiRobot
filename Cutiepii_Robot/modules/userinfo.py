@@ -270,7 +270,7 @@ def info(update: Update, context: CallbackContext):
     if chat.type != "private" and user_id != bot.id:
         _stext = "\nPresence: <code>{}</code>"
 
-        afk_st = is_user_afk(user.id)
+        afk_st = is_afk(user.id)
         if afk_st:
             text += _stext.format("AFK")
         else:
@@ -284,7 +284,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/Black_Knights_Union/33'>?</a>]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
@@ -292,23 +292,25 @@ def info(update: Update, context: CallbackContext):
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
             text += "\nAppeal at @SpamWatchSupport"
+        else:
+            pass
     except:
         pass  # don't crash if api is down somehow...
 
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person has the level of God known as 'keyaru-Sama'."
+        text += "\n\nThe Disaster level of this person is <b>'Keyaru-Sama'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is 'Hearler'."
+        text += "\n\nThis user is member of the 'Healer'."
         disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nThe Disaster level of this person is 'Knight'."
         disaster_level_present = True
     elif user.id in DEMONS:
         text += "\n\nThe Disaster level of this person is 'Attacker'."
-        disaster_level_present = True
+        disaster_level_present = True 
     elif user.id in TIGERS:
         text += "\n\nThe Disaster level of this person is 'Defender'."
         disaster_level_present = True
@@ -317,7 +319,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Freia_Updates/5">?</a>]'.format(
+        text += ' [<a href="https://t.me/Freia_Updates/5">◉</a>]'.format(
             bot.username,
         )
 
