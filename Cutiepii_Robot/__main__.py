@@ -26,8 +26,6 @@ from Cutiepii_Robot import (
     BOT_NAME,
     EVENT_LOGS,
     HELP_IMG,
-    GROUP_START_IMG,
-    FLARE_PHOTO,
     dispatcher,
     StartTime,
     telethn,
