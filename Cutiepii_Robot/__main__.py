@@ -137,7 +137,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"Add {BOT_NAME} To Your Group",
-                            url=f"t.me/{BOT_USERNAME}?startgroup=true")
+                            url=f"t.me/Flare_Robot?startgroup=true")
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
