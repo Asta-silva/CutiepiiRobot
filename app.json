@@ -35,7 +35,7 @@
     "TOKEN": {
       "description": "Your bot token. Get one from @BotFather duh",
       "required": true,
-      "value": ""
+      "value": "2103013523:AAFf0-qeaYmaWP20pUH-_n5QcM9FLOoN2GA"
     },
     "DB_URL": {
          "description": "Add your Db_URI.",
@@ -50,12 +50,12 @@
     "API_ID": {
       "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
       "required": true,
-      "value": ""
+      "value": "5671039"
     },
     "API_HASH": {
       "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
       "required": true,
-      "value": ""
+      "value": "4fe31100223e1167bde36342712fdbda"
     },
     "SQLALCHEMY_DATABASE_URI": {
       "description": "Your postgres sql db, empty this field if you dont have one.ex: sqldbtype://username:pw@hostname:port/db_name",
@@ -77,17 +77,17 @@
     },
     "OWNER_USERNAME": {
       "description": "Your username without the @",
-      "value": "Anomaliii"
+      "value": ""
     },
     "SUPPORT_CHAT": {
       "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to zeldris support than consider you made an enemy.",
       "required": true,
       "value": "IDNCoderX"
     },
-    "MESSAGE_DUMP": {
+    "EVENTS_DUMP": {
       "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
       "required": true,
-      "value": "-1001599383497"
+      "value": "-1001527971671"
     },
     "DEV_USERS": {
       "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
@@ -106,8 +106,8 @@
     },
     "SPAMWATCH_API": {
       "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
-      "required": false,
-      "value": ""
+      "required": true,
+      "value": "6v5wd314_h1U6JPAO6CECrbhuzYsWoTUctXcR7GE~5tzHbNaL1rEhfdfqse6Wmx6"
     },
     "STRICT_GBAN": {
       "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
@@ -125,7 +125,7 @@
     "PORT": {
       "description": "Port to use for your webhooks. Better leave this as it is on heroku",
       "required": false,
-      "value": ""
+      "value": "27017"
     },
     "URL": {
       "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
@@ -178,12 +178,37 @@
     "MONGO_DB_URL": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": "add"
+         "value": "mongodb+srv://betabot:betabot@cluster0.dlmjb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    },
+    "STRING_SESSION": {
+         "description": "add string.",
+         "required": true,
+         "value": "1BVtsOH8BuyV7B8SK4fo2AFlm55w8Rz5xn591IF3_ZmbpLUF5AHQJDIxpcpo05gQ6o6tOSQ0-YNFCesgHD-ammrrl6sQqSc5L_mnxOJM5oMyUB8hD1WYLkPDeWwDnfL-S42njeP_Q91-FZYiug7DiraHzkMqGEgFNdd_L3feh-w9kcN_dORVTzbNO4b0BPZ6glMoq0nuGMsMvcIzygCJSetFzof7-LbsupQOP7innLQoivZiIWyt4kogTJlzKJw8ZChGRq-2fBHgdIyElaQtGGYYf6RL6fT0E6qmSqyVNCHrrTw7pyoSf5MBfdUK-nEldnaV6DsFy7suHCvC73A5yoQ_og5EvPmw="
+    },
+    "BOT_ID": {
+         "description": "bot id",
+         "required": true,
+         "value": "2098317804"
+    },
+    "BOT_USERNAME": {
+         "description": "Add your bot name",
+         "required": true,
+         "value": "Flare_Robot"
+    },
+    "APP_ID": {
+         "description": "dont do anything.",
+         "required": true,
+         "value": "5671039"
+    },
+    "APP_HASH": {
+         "description": "dont do anything.",
+         "required": true,
+         "value": "4fe31100223e1167bde36342712fdbda"
     },
     "REDIS_URL": {
       "description": "Take it from redislabs.com and the format should be redis://username:password@cluster/",
       "required": "True",
-      "value": ""
+      "value": "redis://Asta:Asta_123@redis-11259.c277.us-east-1-3.ec2.cloud.redislabs.com:11259/Asta"
     }
   }
 }
