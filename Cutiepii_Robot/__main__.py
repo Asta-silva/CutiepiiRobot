@@ -448,7 +448,7 @@ def help_button(update, context):
     except BadRequest:
         pass
 
-def flare_callback_data(update, context):
+def cutiepii_callback_data(update, context):
     query = update.callback_query
     uptime = get_readable_time((time.time() - StartTime))
     if query.data == "flare_":
@@ -459,12 +459,12 @@ def flare_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="[► Back ◄]", callback_data="flare_back")
+                    InlineKeyboardButton(text="[► Back ◄]", callback_data="cutiepii_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "flare_back":
+    elif query.data == "cutiepii_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
                 PM_START_TEXT.format(
