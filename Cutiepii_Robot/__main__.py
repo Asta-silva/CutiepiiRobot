@@ -23,7 +23,6 @@ from Cutiepii_Robot import (
     WEBHOOK,
     SUPPORT_CHAT,
     BOT_USERNAME,
-    BOT_NAME,
     EVENT_LOGS,
     HELP_IMG,
     dispatcher,
@@ -135,7 +134,7 @@ Haven't slept since: {}
 buttons = [
     [
                         InlineKeyboardButton(
-                            text=f"Add {BOT_NAME} To Your Group",
+                            text=f"Add MeTo Your Group",
                             url=f"t.me/Flare_Robot?startgroup=true")
                     ],
                    [
