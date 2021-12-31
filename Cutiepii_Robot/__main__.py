@@ -87,9 +87,9 @@ async def awake(event):
       buttons = FLARE_BUTTON,
   )
 
-GROUP_START_IMG = https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4
+GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
 
-FLARE_PHOTO = https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg
+FLARE_PHOTO = "https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
