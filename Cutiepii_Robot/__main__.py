@@ -124,7 +124,7 @@ PM_START_TEXT = """
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/55bc514a9fb63eaa200de.jpg) ××
+➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg) ××
 """
 
 GROUP_START_TEXT = """
