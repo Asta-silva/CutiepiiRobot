@@ -12,14 +12,6 @@ def start_afk(userid, reason):
 def afk_reason(userid):
     return strb(REDIS.get(f'is_afk_{userid}'))
 
-
-def check_afk_status(user_id):
-    try:
-        return SESSION.query(AFK).get(user_id)
-    finally:
-        SESSION.close()
-
-
 def end_afk(userid):
     REDIS.delete(f'is_afk_{userid}')
     return True
