@@ -1,31 +1,3 @@
-"""
-MIT License
-
-Copyright (C) 2017-2019, Paul Larsen
-Copyright (C) 2021 Awesome-RJ
-Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Awesome-RJ/CutiepiiRobot>
-
-This file is part of @Cutiepii_Robot (Telegram Bot)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
 import html
 import time
 
@@ -119,35 +91,35 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEV_USERS:
         message.reply_text(
-            "That user is member of the Ackerman Clan I can't act against our own.",
+            "Sorry! I can't do this Because This user is a freind of Keyaru-Sama, he is a Healer(DEV).",
         )
         return
 
     if int(user_id) in DRAGONS:
-        message.reply_text(
-            "I spy, with my little eye... a Titan Shifter! Why are you guys turning on each other?",
+        message.reply_text( 
+           "What I can't ban this User He is a Knight(Dragon).",
         )
         return
 
     if int(user_id) in DEMONS:
         message.reply_text(
-            "OOOH someone's trying to gban a Royal Blood! *grabs popcorn*",
+            "OOOH someone's trying to gban a Attacker! *grabs popcorn*",
         )
         return
 
     if int(user_id) in TIGERS:
-        message.reply_text("That's a Scout! They cannot be banned!")
+        message.reply_text("This user is my Defender! I can't Ban him!")
         return
 
     if int(user_id) in WOLVES:
-        message.reply_text("That's a Garrison! They cannot be banned!")
+        message.reply_text("That's a Demi-Human! They cannot be banned!")
         return
 
     if user_id == bot.id:
         message.reply_text("You uhh...want me to punch myself?")
         return
 
-    if user_id in [777000, 1087968824]:
+    if user_id in [1087968824]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
