@@ -65,13 +65,13 @@ from telethon import Button, events
 
 @telethn.on(events.NewMessage(pattern="/alive"))
 async def awake(event):
-  CUTIEPII = event.sender.first_name
-  CUTIEPII = "**♡ I,m Cutiepii Robot 愛** \n\n"
-  CUTIEPII += "**♡ I'm Working With Awesome Speed**\n\n"
-  CUTIEPII += "**♡ Cutiepii: LATEST Version**\n\n"
-  CUTIEPII += "**♡ My Creator:** [Rajkumar](t.me/Awesome_RJ)\n\n"
-  CUTIEPII += "**♡ python-Telegram-Bot: 13.7**\n\n"
-  CUTIEPII_BUTTON = [
+  ғʟᴀʀᴇ = event.sender.first_name
+  ғʟᴀʀᴇ = "**♡ ɪ,ᴍ ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
+  ғʟᴀʀᴇ += "**♡ ɪ'ᴍ ᴡᴏʀᴋɪɴɢ ᴡɪᴛʜ sᴇxʏ sᴘᴇᴇᴅ**\n\n"
+  ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ**\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴍʏ ᴅᴀʀʟɪɴɢ:** [ᴀsᴛᴀ](t.me/Awesome_RǫJ)\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴘʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ: 13.7**\n\n"
+  FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
           Button.url("📢 Updates", "https://t.me/Freia_Support")
@@ -80,8 +80,8 @@ async def awake(event):
   await telethn.send_file(
       event.chat_id,
       FLARE_PHOTO,
-      caption = CUTIEPII,
-      buttons = CUTIEPII_BUTTON,
+      caption = ғʟᴀʀᴇ,
+      buttons = FLARE_BUTTON,
   )
 
     
@@ -124,7 +124,7 @@ PM_START_TEXT = """
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg) ××
+➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/68f884179cce86c1fdf13.jpg) ××
 """
 
 GROUP_START_TEXT = """
