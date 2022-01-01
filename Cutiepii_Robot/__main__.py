@@ -81,7 +81,7 @@ async def awake(event):
       event.chat_id,
       FLARE_PHOTO,
       caption = ғʟᴀʀᴇ,
-      buttons = FLARE_BUTTON,
+      buttons = CUTIEPII_BUTTON,
   )
 
 GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
