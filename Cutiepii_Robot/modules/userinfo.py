@@ -36,7 +36,7 @@ from Cutiepii_Robot.modules.sql import SESSION
 import Cutiepii_Robot.modules.sql.userinfo_sql as sql
 from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler
 from Cutiepii_Robot.modules.sql.global_bans_sql import is_user_gbanned
-from Cutiepii_Robot.modules.redis.afk_redis import is_user_afk, afk_reason, check_afk_status
+from Cutiepii_Robot.modules.redis.afk_redis import is_user_afk, afk_reason
 from Cutiepii_Robot.modules.sql.users_sql import get_user_num_chats
 from Cutiepii_Robot.modules.helper_funcs.chat_status import sudo_plus
 from Cutiepii_Robot.modules.helper_funcs.extraction import extract_user
