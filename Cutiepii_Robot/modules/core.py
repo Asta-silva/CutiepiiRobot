@@ -51,7 +51,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "AsunaRobot/modules/",  # pylint:disable=E0602
+                    "Cutiepii_Robot/modules/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:
