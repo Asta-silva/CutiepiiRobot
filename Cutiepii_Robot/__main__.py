@@ -87,7 +87,7 @@ async def awake(event):
     
 GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
 
-FLARE_PHOTO = "https://telegra.ph/file/3cae9e7dcd695f89c0189.jpg"
+FLARE_PHOTO = "https://telegra.ph/file/852e96d6c59f2ccad32df.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -124,7 +124,7 @@ PM_START_TEXT = """
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/68f884179cce86c1fdf13.jpg) ××
+➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/852e96d6c59f2ccad32df.jpg) ××
 """
 
 GROUP_START_TEXT = """
