@@ -606,9 +606,6 @@ BAKA_HANDLER = CommandHandler("baka", baka, run_async=True)
 DVA_HANDLER = CommandHandler("dva", dva, run_async=True)
 
 
-dispatcher.add_handler(ADD_NSFW_HANDLER)
-dispatcher.add_handler(REMOVE_NSFW_HANDLER)
-dispatcher.add_handler(LIST_NSFW_CHATS_HANDLER)
 dispatcher.add_handler(LEWDKEMO_HANDLER)
 dispatcher.add_handler(NEKO_HANDLER)
 dispatcher.add_handler(FEET_HANDLER)
@@ -664,9 +661,6 @@ dispatcher.add_handler(BAKA_HANDLER)
 dispatcher.add_handler(DVA_HANDLER)
 
 __handlers__ = [
-    ADD_NSFW_HANDLER,
-    REMOVE_NSFW_HANDLER,
-    LIST_NSFW_CHATS_HANDLER,
     NEKO_HANDLER,
     FEET_HANDLER,
     YURI_HANDLER,
@@ -725,11 +719,7 @@ __handlers__ = [
 __help__ = """
 Module credits`*:*[Dank-del](https://github.com/Dank-del/Chizuru/) ,
 Also thanks to [EverythingSuckz](https://t.me/EverythingSuckz) for NSFW filter.
-    
-*ENABLE AND DISABLE* :
-    
-/addnsfw `*:*Enable NSFW mode
-/rmnsfw `*:*Disable NSFW mode
+  
  
 *Commands* `*:*  
    ➢ `/neko`*:*Sends Random SFW Neko source Images.
