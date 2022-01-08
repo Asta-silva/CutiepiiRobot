@@ -2,7 +2,6 @@ import os
 import html
 import nekos
 import requests
-import Cutiepii_Robot.modules.sql.nsfw_sql as sql
 
 from time import sleep
 from PIL import Image
