@@ -546,10 +546,6 @@ def dva(update, context):
         return
     msg.reply_photo(url)
 
-ADD_NSFW_HANDLER = CommandHandler("addnsfw", add_nsfw, run_async=True)
-REMOVE_NSFW_HANDLER = CommandHandler("rmnsfw", rem_nsfw, run_async=True)
-LIST_NSFW_CHATS_HANDLER = CommandHandler(
-    "nsfwchats", list_nsfw_chats, filters=CustomFilters.dev_filter, run_async=True)
 LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo, run_async=True)
 NEKO_HANDLER = CommandHandler("neko", neko, run_async=True)
 FEET_HANDLER = CommandHandler("feet", feet, run_async=True)
