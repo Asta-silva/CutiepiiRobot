@@ -1,31 +1,3 @@
-"""
-MIT License
-
-Copyright (C) 2017-2019, Paul Larsen
-Copyright (C) 2021 Awesome-RJ
-Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Awesome-RJ/CutiepiiRobot>
-
-This file is part of @Cutiepii_Robot (Telegram Bot)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
 import os
 import html
 import nekos
@@ -43,60 +15,6 @@ from Cutiepii_Robot import dispatcher, updater
 from Cutiepii_Robot.modules.log_channel import gloggable
 from Cutiepii_Robot.modules.helper_funcs.chat_status import user_admin
 from Cutiepii_Robot.modules.helper_funcs.filters import CustomFilters
-
-@user_admin
-@gloggable
-def add_nsfw(update: Update, context: CallbackContext):
-    chat = update.effective_chat
-    msg = update.effective_message
-    user = update.effective_user #Remodified by @EverythingSuckz
-    is_nsfw = sql.set_nsfw(chat.id)
-    if not is_nsfw:
-        sql.set_nsfw(chat.id)
-        msg.reply_text("Activated NSFW Mode!")
-        message = (
-            f"<b>{chat.title}:</b>\n"
-            f"ACTIVATED_NSFW\n"
-            f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        )
-        return message
-    msg.reply_text("NSFW Mode is already Activated for this chat!")
-    return ""
-
-
-@user_admin
-@gloggable
-def rem_nsfw(update: Update, context: CallbackContext):
-    msg = update.effective_message
-    chat = update.effective_chat
-    user = update.effective_user
-    is_nsfw = sql.rem_nsfw(chat.id)
-    if not is_nsfw:
-        msg.reply_text("NSFW Mode is already Deactivated")
-        return ""
-    sql.rem_nsfw(chat.id)
-    msg.reply_text("Rolled Back to SFW Mode!")
-    message = (
-        f"<b>{chat.title}:</b>\n"
-        f"DEACTIVATED_NSFW\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-    )
-    return message
-
-
-def list_nsfw_chats(update: Update, context: CallbackContext):
-    chats = sql.get_all_nsfw_chats()
-    text = "<b>NSFW Activated Chats</b>\n"
-    for chat in chats:
-        try:
-            x = context.bot.get_chat(int(*chat))
-            name = x.title or x.first_name
-            text += f"• <code>{name}</code>\n"
-        except (BadRequest, Unauthorized):
-            sql.rem_nsfw(*chat)
-        except RetryAfter as e:
-            sleep(e.retry_after)
-    update.effective_message.reply_text(text, parse_mode="HTML")
 
 
 def neko(update, context):
