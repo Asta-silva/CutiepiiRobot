@@ -68,17 +68,6 @@ def slap(update, context):
     reply_text(repl, parse_mode=ParseMode.MARKDOWN)
 
 
-def pat(update: Update, _):
-    msg = update.effective_message
-    pat = requests.get("https://some-random-api.ml/animu/pat").json()
-    link = pat.get("link")
-    if not link:
-        msg.reply_text("No URL was received from the API!")
-        return
-    msg.reply_video(link)
-
-
-
 @typing_action
 def punch(update, context):
     args = context.args
@@ -130,6 +119,17 @@ def police(update, context):
         time.sleep(0.5)
 
 
+def pat(update: context):
+    msg = update.effective_message
+    pat = requests.get("https://some-random-api.ml/animu/pat").json()
+    link = pat.get("link")
+    if not link:
+        msg.reply_text("No URL was received from the API!")
+        return
+    msg.reply_video(link)
+
+
+ 
 @typing_action
 def hug(update, context):
     args = context.args
