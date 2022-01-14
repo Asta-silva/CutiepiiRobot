@@ -120,7 +120,7 @@ def police(update, context):
 
 
 def pat(update: context):
-    args = context args
+    args = context.args
     msg = update.effective_message
 
     # reply to correct message
