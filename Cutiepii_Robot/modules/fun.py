@@ -9,7 +9,7 @@ from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
 import Cutiepii_Robot.modules.fun_strings as fun
-from Cutiepii_Robot import LOGGER, DEV_USERS, SUPPORT_USERS, dispatcher
+from Cutiepii_Robot import LOGGER, DEV_USERS, DEMONS, dispatcher
 from Cutiepii_Robot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
