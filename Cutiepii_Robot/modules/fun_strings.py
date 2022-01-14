@@ -144,6 +144,17 @@ SLAP_TEMPLATES = (
     "Goblin slayer slays {user2}",  # Goblin Slayer
 )
 
+HUG = ("hugs", "hugged", "kissed", "pinches")
+
+
+HUG_TEMPLATES = (
+    "{user1} {hug} {user2}.",
+    "{user1} {hug} {user2} warmly.",
+    "{user1} {hug} {user2} with a love. 💘",
+    "{user1} {hug} {user2} with kindness.",
+)
+
+
 PAT_TEMPLATES = (
     "{user1} pats {user2} on the head.",
     "*gently rubs {user2}'s head*.",
