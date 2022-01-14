@@ -118,7 +118,7 @@ def police(update, context):
         message.edit_text(i)
         time.sleep(0.5)
 
-
+@typing_action
 def pat(update, context):
     args = context.args
     msg = update.effective_message
@@ -515,7 +515,7 @@ PUNCH_HANDLER = DisableAbleCommandHandler(
     "punch", punch, pass_args=True, run_async=True
 )
 HUG_HANDLER = DisableAbleCommandHandler("warm", hug, pass_args=True, run_async=True)
-PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=True)
+PAT_HANDLER = DisableAbleCommandHandler("pat", pat, pass_args=True, run_async=True)
 GBUN_HANDLER = CommandHandler("gbun", gbun, run_async=True)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 CRI_HANDLER = DisableAbleCommandHandler("cri", cri, run_async=True)
