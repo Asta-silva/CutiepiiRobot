@@ -482,7 +482,7 @@ PUNCH_HANDLER = DisableAbleCommandHandler(
     "punch", punch, pass_args=True, run_async=True
 )
 HUG_HANDLER = DisableAbleCommandHandler("warm", hug, pass_args=True, run_async=True)
-PAT_HANDLER = DisableAbleCommandHandler("pat, pat, run_async=True)
+PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=True)
 GBUN_HANDLER = CommandHandler("gbun", gbun, run_async=True)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 CRI_HANDLER = DisableAbleCommandHandler("cri", cri, run_async=True)
