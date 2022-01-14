@@ -68,7 +68,6 @@ def slap(update, context):
     reply_text(repl, parse_mode=ParseMode.MARKDOWN)
 
 
-@run_async
 def pat(update: Update, _):
     msg = update.effective_message
     pat = requests.get("https://some-random-api.ml/animu/pat").json()
