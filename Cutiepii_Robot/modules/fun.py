@@ -119,7 +119,7 @@ def police(update, context):
         time.sleep(0.5)
 
 
-def pat(update: context):
+def pat(update, context):
     args = context.args
     msg = update.effective_message
 
