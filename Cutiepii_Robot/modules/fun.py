@@ -68,6 +68,18 @@ def slap(update, context):
     reply_text(repl, parse_mode=ParseMode.MARKDOWN)
 
 
+@run_async
+def pat(update: Update, _):
+    msg = update.effective_message
+    pat = requests.get("https://some-random-api.ml/animu/pat").json()
+    link = pat.get("link")
+    if not link:
+        msg.reply_text("No URL was received from the API!")
+        return
+    msg.reply_video(link)
+
+
+
 @typing_action
 def punch(update, context):
     args = context.args
@@ -470,6 +482,7 @@ PUNCH_HANDLER = DisableAbleCommandHandler(
     "punch", punch, pass_args=True, run_async=True
 )
 HUG_HANDLER = DisableAbleCommandHandler("warm", hug, pass_args=True, run_async=True)
+PAT_HANDLER = DisableAbleCommandHandler("areh, pat, pass_args=True, run_async=True)
 GBUN_HANDLER = CommandHandler("gbun", gbun, run_async=True)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 CRI_HANDLER = DisableAbleCommandHandler("cri", cri, run_async=True)
