@@ -120,16 +120,49 @@ def police(update, context):
 
 
 def pat(update: context):
+    args = context args
     msg = update.effective_message
-    pat = requests.get("https://some-random-api.ml/animu/pat").json()
-    link = pat.get("link")
-    if not link:
-        msg.reply_text("No URL was received from the API!")
-        return
-    msg.reply_video(link)
+
+    # reply to correct message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+
+    # get user who sent message
+    if msg.from_user.username:
+        curr_user = "@" + escape_markdown(msg.from_user.username)
+    else:
+        curr_user = "[{}](tg://user?id={})".format(
+            msg.from_user.first_name, msg.from_user.id
+        )
+
+    user_id = extract_user(update.effective_message, args)
+    if user_id:
+        patted_user = context.bot.get_chat(user_id)
+        user1 = curr_user
+        if patted_user.username:
+            user2 = "@" + escape_markdown(patted_user.username)
+        else:
+            user2 = "[{}](tg://user?id={})".format(
+                patted_user.first_name, patted_user.id
+            )
+
+    # if no target found, bot targets the sender
+    else:
+        user1 = "Awwh! [{}](tg://user?id={})".format(
+            context.bot.first_name, context.bot.id
+        )
+        user2 = curr_user
+
+    temp = random.choice(fun.PAT_TEMPLATES)
+    pat = random.choice(fun.PAT)
+
+    repl = temp.format(user1=user1, user2=user2, pat=pat)
+
+    reply_text(repl, parse_mode=ParseMode.MARKDOWN)
 
 
- 
+
 @typing_action
 def hug(update, context):
     args = context.args
@@ -441,6 +474,7 @@ Some dank memes for fun or whatever!
 × /decide: Randomly answer yes no etc.
 × /abuse: Abuses the retard!
 × /table: Flips a table...
+× /pat : to patt!!
 × /runs: Reply a random string from an array of replies.
 × /slap: Slap a user, or get slapped if not a reply.
 × /pasta: Famous copypasta meme, try and see.
