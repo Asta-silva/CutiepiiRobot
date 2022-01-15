@@ -1,3 +1,4 @@
+#credit :: @Asta_silva02
 import asyncio
 import os
 from datetime import datetime
@@ -5,7 +6,7 @@ from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
-from Cutiepii_Robot.modules.helper_func.google_image_download import googleimagesdownload
+from Cutiepii_Robot.modules.helper_funcs.google_image_download import googleimagesdownload
 
 DELETE_TIMEOUT = 0
 
