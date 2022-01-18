@@ -79,7 +79,7 @@ if ENV:
     ERROR_LOGS = os.environ.get("ERROR_LOGS", None) # Error Logs (Channel Ya Group Choice Is Yours) (-100)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # If You Deploy On Heraku. [URL PERTEN:- https://{App Name}.herokuapp.com/ || EXP:- https://yuki-cutiepii-robot.herokuapp.com/]
-    PORT = int(os.environ.get("PORT", 27017)) 
+    PORT = int(os.environ.get("PORT", 8443)) 
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", 5671039) # Bot Owner's API_ID (From:- https://my.telegram.org/auth)
     API_HASH = os.environ.get("API_HASH", "4fe31100223e1167bde36342712fdbda") # Bot Owner's API_HASH (From:- https://my.telegram.org/auth)
