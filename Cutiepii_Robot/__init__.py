@@ -83,7 +83,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", 5671039) # Bot Owner's API_ID (From:- https://my.telegram.org/auth)
     API_HASH = os.environ.get("API_HASH", "4fe31100223e1167bde36342712fdbda") # Bot Owner's API_HASH (From:- https://my.telegram.org/auth)
-    DB_URL = os.environ.get("DATABASE_URL", "postgres://cossaojk:apEf76LRIlm0RL_SUngGreMghS7Bm5fb@castor.db.elephantsql.com/cossaojk") # Any SQL Database Link (RECOMMENDED:- PostgreSQL & https://www.elephantsql.com)
+    DB_URL = os.environ.get("DATABASE_URL", "postgresql://genshinur:NcCacM36KFDz@45.10.153.214/genshinnm") # Any SQL Database Link (RECOMMENDED:- PostgreSQL & https://www.elephantsql.com)
     DONATION_LINK = os.environ.get("DONATION_LINK") # Donation Link (ANY)
     LOAD = os.environ.get("LOAD", "").split() # Don't Change
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split() # Don't Change
