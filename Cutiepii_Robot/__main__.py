@@ -63,7 +63,7 @@ from telegram.utils.helpers import escape_markdown
 from pyrogram import Client, idle
 from telethon import Button, events
 
-@telethn.on(events.NewMessage(pattern="/alive"))
+@telethn.on(events.NewMessage(pattern="/check"))
 async def awake(event):
   ғʟᴀʀᴇ = event.sender.first_name
   ғʟᴀʀᴇ = "**♡ ɪ,ᴍ ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
