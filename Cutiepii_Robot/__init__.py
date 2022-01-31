@@ -106,7 +106,7 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None) # Use @SpamWatchSupport
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None) # From https://t.me/SpamWatchBot 
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # Bot Username
-    STRING_SESSION = os.environ.get("STRING_SESSION", None) # Telethon Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]
+    STRING_SESSION = os.environ.get("STRING_SESSION", "1BVtsOIABu62AUbaaz3NM4sa70oiklfN8YpUoJA3If3uL5Soj8fB9X9rNqK0dzLW6D9M6znad7rK0QrzZ_0SnDrLbGnQLBnNlnaOsgglBu6BqbCLUMs6iVLkoWspCj89gZfcw_rBpjXaGGuMkpUt8H3ZW4ZpI8qvUsvTB8VZ_r7vmRtj-JwJ6E7Qugin94rLws_n7WhnUfvV-V5EPVHJQ5_yrA6Uoy35GCAGdNMTLiHXW7k5Nw8XELeKXKjX-3M8qon9OGTlAtjC-bRTNdAlCiS1d7gJSMdKQSj5izGA68CPy-b7-Y2xiZAy26RCBxeREYSm6h3tsgBUG4pfqHWKN-N_5BYmE9P8=") # Telethon Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]
     APP_ID = os.environ.get("APP_ID", None) # 2nd ID 
     APP_HASH = os.environ.get("APP_HASH", None) # 2nd ID
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", True) # Heroku App Name 
