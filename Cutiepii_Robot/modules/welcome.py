@@ -229,7 +229,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oh hi, my creator.", reply_to_message_id=reply
+                    "ようこそ, Keyaru Sama.", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -241,7 +241,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Devs
             if new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! A member of the Iron Blood just joined!",
+                    "The Healer have arrived be at ease now",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -249,7 +249,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Sudos
             if new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Huh! A Sudo Users just joined! Stay Alert!",
+                    "A Knight has arrived for guarding",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -257,7 +257,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Support
             if new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "Huh! Someone with a Support Users just joined!",
+                    "The magic has started the wizard have arrived",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome WOLVES
             if new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "Oof! A Whitelist Users just joined!", reply_to_message_id=reply
+                    "The shooter have arrived with guns be assured", reply_to_message_id=reply
                 )
                 continue
 
@@ -281,10 +281,10 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="🚑 Support", url=f"https://t.me/{SUPPORT_CHAT}"
+                                    text="🚑 Support", url=f"https://t.me/Freia_Support{SUPPORT_CHAT}"
                                 ),
                                 InlineKeyboardButton(
-                                    text="📢 Updates", url="https://t.me/Black_Knights_Union"
+                                    text="📢 Updates", url=f"https://t.me/Freia_Updates"
                                 ),
                             ]
                         ],
