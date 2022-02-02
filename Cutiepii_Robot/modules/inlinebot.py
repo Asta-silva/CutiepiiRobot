@@ -3,9 +3,9 @@ MIT License
 
 Copyright (C) 2017-2019, Paul Larsen
 Copyright (C) 2021 Awesome-RJ
-Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Awesome-RJ/CutiepiiRobot>
+Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Asta-silva/Flare-Robot>
 
-This file is part of @Cutiepii_Robot (Telegram Bot)
+This file is part of @Flare_Robot (Telegram Bot)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
