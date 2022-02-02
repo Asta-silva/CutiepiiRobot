@@ -284,7 +284,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/Freia_Updates/5'>💥</a>]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/Freia_Updates/5'>๏</a>]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
@@ -307,17 +307,17 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Knight'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Attacker'."
+        text += "\n\nThe Disaster level of this person is 'Wizard'."
         disaster_level_present = True 
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Defender'."
+        text += "\n\nThe Disaster level of this person is 'Shooter'."
         disaster_level_present = True
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Demi-Human'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Freia_Updates/5">◉</a>]'.format(
+        text += ' [<a href="https://t.me/Freia_Updates/5">◈</a>]'.format(
             bot.username,
         )
 
