@@ -11,7 +11,6 @@ from platform import python_version
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
-from telegram import InlineKeyboardButton
 
 from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update, MessageEntity, __version__ as ptbver, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CommandHandler
@@ -536,12 +535,6 @@ def __user_info__(user_id):
         result += f"<b>What others say:</b>\n{bio}\n"
     result = result.strip("\n")
     return result
-buttons = [
-    [
-                       InlineKeyboardButton(text="[► Health ◄]", url="https://t.me/Freia_Updates/9"),
-                       InlineKeyboardButton(text="[❔ Disaster ]", url="https://t.me/Freia_Updates/5"),
-                     ],
-
 
 
 __help__ = """
