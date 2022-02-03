@@ -364,12 +364,6 @@ def info(update: Update, context: CallbackContext):
 
     rep.delete()
 
-buttons = [
-    [
-                       InlineKeyboardButton(text="[► Health ◄]", url="https://t.me/Freia_Updates/9"),
-                       InlineKeyboardButton(text="[❔ Disaster ]", url="https://t.me/Freia_Updates/5"),
-                     ],
-
 
 def about_me(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
@@ -542,6 +536,12 @@ def __user_info__(user_id):
         result += f"<b>What others say:</b>\n{bio}\n"
     result = result.strip("\n")
     return result
+buttons = [
+    [
+                       InlineKeyboardButton(text="[► Health ◄]", url="https://t.me/Freia_Updates/9"),
+                       InlineKeyboardButton(text="[❔ Disaster ]", url="https://t.me/Freia_Updates/5"),
+                     ],
+
 
 
 __help__ = """
