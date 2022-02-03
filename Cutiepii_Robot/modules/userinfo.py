@@ -109,7 +109,7 @@ def hpmanager(user):
         if not sql.get_user_bio(user.id):
             new_hp -= no_by_per(total_hp, 10)
 
-        if is_afk(user.id):
+        if is_user_afk(user.id):
             afkst = set_afk(user.id)
             # if user is afk and no reason then decrease 7%
             # else if reason exist decrease 5%
