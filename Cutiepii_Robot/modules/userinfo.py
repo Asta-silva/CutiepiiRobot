@@ -110,7 +110,7 @@ def hpmanager(user):
             new_hp -= no_by_per(total_hp, 10)
 
         if is_user_afk(user.id):
-            afkst = set_afk(user.id)
+            afkst = afk_reason(user.id)
             # if user is afk and no reason then decrease 7%
             # else if reason exist decrease 5%
             new_hp -= no_by_per(total_hp, 7) if not afkst else no_by_per(total_hp, 5)
@@ -149,7 +149,7 @@ def get_id(update: Update, context: CallbackContext):
             user2 = message.reply_to_message.forward_from
 
             msg.reply_text(
-                f"<b>Telegram ID:</b>\n"
+                f"<b>Telegram ID:</b>,"
                 f"• {html.escape(user2.first_name)} - <code>{user2.id}</code>.\n"
                 f"• {html.escape(user1.first_name)} - <code>{user1.id}</code>.",
                 parse_mode=ParseMode.HTML,
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/Freia_Updates/9"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/Freia_Updates/5")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/Freia_Updates/9"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/Freia_Updates/5")
                         ],
                     ]
                 ),
@@ -412,6 +412,7 @@ def about_me(update: Update, context: CallbackContext):
         update.effective_message.reply_text("There isnt one, use /setme to set one.")
 
 
+
 def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
     user_id = message.from_user.id
@@ -444,15 +445,38 @@ def set_about_me(update: Update, context: CallbackContext):
             )
 
 @sudo_plus
-def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current Flare Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
-    result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By kennedy-ex 」</b>"
-    update.effective_message.reply_text(
-        result,
-        parse_mode=ParseMode.HTML, 
-        disable_web_page_preview=True
-   )
+def stats(update, context):
+    uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
+    botuptime = get_readable_time((time.time() - StartTime))
+    status = "*╒═══「 System statistics 」*\n\n"
+    status += "*➢ Python Version:* " + python_version() + "\n"
+    status += "*➢ python-Telegram-Bot:* " + str(ptbver) + "\n"
+    status += "*➢ Uptime:* " + str(botuptime) + "\n"
+    try:
+        update.effective_message.reply_text(
+            status
+            + "\n*Bot statistics*:\n"
+            + "\n".join([mod.__stats__() for mod in STATS])
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Freia_Updates)\n\n"
+            + "╘══「 by [ᴀsᴛᴀ](https://github.com/Asta-silva) 」\n",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
+    except BaseException:
+        update.effective_message.reply_text(
+            (
+                (
+                    (
+                        "\n*Bot statistics*:\n"
+                        + "\n".join(mod.__stats__() for mod in STATS)
+                    )
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates/5)\n\n"
+                )
+                + "╘══「 by [Asta](https://t.me/Chifuyu_Matsuno_Kun) 」\n"
+            ),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
         
         
 def about_bio(update: Update, context: CallbackContext):
@@ -540,36 +564,45 @@ def __user_info__(user_id):
 
 __help__ = """
 *ID:*
-❂ /id*:* get the current group id. If used by replying to a message, gets that user's id.
-❂ /gifid*:* reply to a gif to me to tell you its file ID.
+ • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
+ • `/gifid`*:* reply to a gif to me to tell you its file ID.
  
 *Self addded information:* 
-❂ /setme <text>*:* will set your info
-❂ /me*:* will get your or another user's info.
+ • `/setme <text>`*:* will set your info
+ • `/me`*:* will get your or another user's info.
 Examples:
-❂ /setme I am a wolf.
-❂ /me @username(defaults to yours if no user specified)
+ `/setme I am a wolf.`
+ `/me @username(defaults to yours if no user specified)`
  
 *Information others add on you:* 
-❂ /bio*:* will get your or another user's bio. This cannot be set by yourself.
-❂ /setbio <text>*:* while replying, will save another user's bio 
+ • `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
+• `/setbio <text>`*:* while replying, will save another user's bio 
 Examples:
-❂ /bio @username(defaults to yours if not specified).
-❂ /setbio This user is a wolf (reply to the user)
+ `/bio @username(defaults to yours if not specified).`
+ `/setbio This user is a wolf` (reply to the user)
  
 *Overall Information about you:*
-❂ /info*:* get information about a user. 
+ • `/info`*:* get information about a user. 
+ 
+*◢ Intellivoid SpamProtection:*
+ • `/spwinfo`*:* SpamProtection Info
  
 *json Detailed info:*
-❂ /json*:* Get Detailed info about any message.
+ • `/json`*:* Get Detailed info about any message.
+ 
+*Covid info:*
+ • `/covid`*:* Get Detailed info about Covid.
+ 
+*ARQ Statistics:*
+ /arq : ARQ API Stats.
  
 *AFk:*
 When marked as AFK, any mentions will be replied to with a message stating that you're not available!
-❂ /afk <reason>*:* Mark yourself as AFK.
-  - brb <reason>: Same as the afk command, but not a command. 
+ • `/afk <reason>`*:* Mark yourself as AFK.
+  - brb <reason>: Same as the afk command, but not a command.\n 
   
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/KennedyProject/44)
+ Come and see [HP System explained](https://t.me/Black_Knights_Union/33)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
