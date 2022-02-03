@@ -252,26 +252,26 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Getting info...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b> Appraisal results:</b> 」\n"
-        f"ID: <code>{user.id}</code>\n"
-        f"First Name: {html.escape(user.first_name)}"
+        f"╔═━「<b> Appraisal results:</b> 」\n"
+        f"✪ ID: <code>{user.id}</code>\n"
+        f"✪ First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\nLast Name: {html.escape(user.last_name)}"
+        text += f"\n✪ Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\nUsername: @{html.escape(user.username)}"
+        text += f"\n✪ Username: @{html.escape(user.username)}"
 
-    text += f"\nUserlink: {mention_html(user.id, 'link')}"
+    text += f"\n✪ Userlink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\nPresence: <code>{}</code>"
+        _stext = "\n✪ Presence: <code>{}</code>"
 
-        afk_st = is_user_afk(user.id)
+        afk_st = is_afk(user.id)
         if afk_st:
             text += _stext.format("AFK")
         else:
@@ -285,7 +285,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/Freia_Updates/9'>๏</a>]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
@@ -299,28 +299,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is <b>'Keyaru-Sama'</b>."
+        text += "\n\nThe Disaster level of this person is 'King'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of the 'Healer'."
+        text += "\n\nThis user is member of 'Prince'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Knight'."
+        text += "\n\nThe Disaster level of this person is 'Emperor'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Wizard'."
-        disaster_level_present = True 
+        text += "\n\nThe Disaster level of this person is 'Governor'."
+        disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Shooter'."
+        text += "\n\nThe Disaster level of this person is 'Captain'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Demi-Human'."
+        text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
-
-    if disaster_level_present:
-        text += ' [<a href="https://t.me/Freia_Updates/5">💖</a>]'.format(
-            bot.username,
-        )
+    elif user.id == 1829047705:
+         text += "\n\nOwner Of A Bot. Queen Of @excrybaby. Bot Name Inspired From 'JoJo'."
+         disaster_level_present = True
 
     try:
         user_member = chat.get_member(user.id)
