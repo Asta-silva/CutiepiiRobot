@@ -448,7 +448,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update, context):
-    status += "*➢ Storage:* " + str(disk[3]) + " %\n\n"
+    status = "*➢ Storage:* " + str(disk[3]) + " %\n\n"
     status += "*➢ Python Version:* " + python_version() + "\n"
     status += "*➢ python-Telegram-Bot:* " + str(ptbver) + "\n"
     status += "*➢ Uptime:* " + str(botuptime) + "\n"
