@@ -28,6 +28,7 @@ from Cutiepii_Robot import (
     INFOPIC,
     dispatcher,
     sw,
+    get_readabletime,
     StartTime,
     SUPPORT_CHAT,
 )
