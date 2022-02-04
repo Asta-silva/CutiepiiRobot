@@ -60,7 +60,7 @@ if ENV:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = {int(x) for x in os.environ.get("DEMONS", "").split()}
+        DEMONS = {int(x) for x in os.environ.get("SUPPORT_USERS", "").split()}
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
