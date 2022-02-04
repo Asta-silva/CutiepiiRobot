@@ -321,6 +321,8 @@ WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
+DEMONS=SUPORT_USERS
+
 # Load at end to ensure all prev variables have been set
 from Cutiepii_Robot.modules.helper_funcs.handlers import (
     CustomCommandHandler,
