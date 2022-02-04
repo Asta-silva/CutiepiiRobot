@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/Freia_Updates/5"),
+                                "Health", url="https://t.me/Freia_Updates/9"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/Freia_Updates/9")
+                                "Disaster", url="https://t.me/Freia_Updates/5")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/komiupdates/10"),
+                                "Health", url="https://t.me/Freia_Updates/9"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/komiupdates/4")
+                                "Disaster", url="https://t.me/Freia_Updates/5")
                         ],
                     ]
                 ),
@@ -468,7 +468,7 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Komiupdates)\n\n"
+            + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates)\n\n"
             + "╘══「 Powered By [Komi - San](https://t.me/KomiXryu_Bot) | [Network](https://t.me/toman_network) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -481,9 +481,9 @@ def stats(update, context):
                         "\n*Bot Statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Komiupdates)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates)\n\n"
                 )
-                + "╘══「 Powered By [Komi - San](https://t.me/KomiXryu_Bot) | [Network](https://t.me/toman_network)」\n"
+                + "╘══「 Made By [ᴀsᴛᴀ•°•](https://t.me/Asta_silva02) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
