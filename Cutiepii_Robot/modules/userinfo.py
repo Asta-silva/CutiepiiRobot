@@ -28,7 +28,6 @@ from Cutiepii_Robot.__main__ import STATS, TOKEN, USER_INFO
 import Cutiepii_Robot.modules.sql.userinfo_sql as sql
 from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler
 from Cutiepii_Robot.modules.sql.global_bans_sql import is_user_gbanned
-from Cutiepii_Robot.modules.sql.afk_sql import is_afk, check_afk_status
 from Cutiepii_Robot.modules.sql.users_sql import get_user_num_chats
 from Cutiepii_Robot.modules.helper_funcs.chat_status import sudo_plus
 from Cutiepii_Robot.modules.helper_funcs.extraction import extract_user
