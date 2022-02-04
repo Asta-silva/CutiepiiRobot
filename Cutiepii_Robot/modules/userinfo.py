@@ -298,25 +298,25 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is my 'ᴅᴀʀʟɪɴɢ'."
+        text += "\n\nThis person is my 'Keyaru sama'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is my 'Onii Chan'."
+        text += "\n\nThis user is my 'Healing Hero'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is my 'Sensei'."
+        text += "\n\nThis person is my 'Knight'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is my 'Senpai'."
+        text += "\n\nThis person is my 'Magic Hero'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nthis person is my 'Best Friend'."
+        text += "\n\nthis person is my 'Rifle Hero'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is my 'Friend'."
+        text += "\n\nThis person is my 'Demi Human'."
         disaster_level_present = True
     elif user.id == 1635151800:
-         text += "\n\nMy owner. @Ryu_God. My Darling."
+         text += "\n\nMy owner @Ryu_God. My Darling."
          disaster_level_present = True
 
     try:
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/komiupdates/10"),
+                                "Health", url="https://t.me/Freia_Updates/5"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/komiupdates/4")
+                                "Disaster", url="https://t.me/Freia_Updates/9")
                         ],
                     ]
                 ),
