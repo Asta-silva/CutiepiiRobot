@@ -31,7 +31,7 @@ from Cutiepii_Robot.modules.sql.global_bans_sql import is_user_gbanned
 from Cutiepii_Robot.modules.sql.users_sql import get_user_num_chats
 from Cutiepii_Robot.modules.helper_funcs.chat_status import sudo_plus
 from Cutiepii_Robot.modules.helper_funcs.extraction import extract_user
-from Cutiepii_Robot import telethn as CutiepiiTelethonClient
+from Cutiepii_Robot import telethn as SaitamaTelethonClient
 
 
 def no_by_per(totalhp, percentage):
