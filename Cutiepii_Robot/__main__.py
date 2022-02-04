@@ -123,6 +123,7 @@ PM_START_TEXT = """
 * I am an Anime themed advance group management bot with a lots of Features.*
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
+• `{}` *users, across* `{}` *chats.*
 ➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/852e96d6c59f2ccad32df.jpg) ××
 """
