@@ -123,7 +123,6 @@ PM_START_TEXT = """
 * I am an Anime themed advance group management bot with a lots of Features.*
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
 ➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/852e96d6c59f2ccad32df.jpg) ××
 """
@@ -280,7 +279,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "OOH yes Darling 💘💘 I won't sleep until I satisfy you!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            GROUP_START_IMG, caption284 Lets go to oyo, Be ready for it.\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
