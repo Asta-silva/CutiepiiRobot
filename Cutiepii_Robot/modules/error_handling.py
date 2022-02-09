@@ -1,30 +1,8 @@
-"""
-MIT License
-
-Copyright (C) 2017-2019, Paul Larsen
-Copyright (C) 2021 Awesome-RJ
-Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Awesome-RJ/CutiepiiRobot>
-
-This file is part of @Cutiepii_Robot (Telegram Bot)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
+"import html
+import io
+import random
+import sys
+import traceback
 
 import html
 import io
@@ -37,7 +15,7 @@ import requests
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler
 
-from Cutiepii_Robot import dispatcher, DEV_USERS, ERROR_LOGS
+from zeldris import dispatcher, DEV_USERS, MESSAGE_DUMP
 
 pretty_errors.mono()
 
@@ -73,7 +51,7 @@ def error_callback(update: Update, context: CallbackContext):
         try:
             stringio = io.StringIO()
             pretty_errors.output_stderr = stringio
-            output = pretty_errors.excepthook(
+            pretty_errors.excepthook(
                 type(context.error),
                 context.error,
                 context.error.__traceback__,
@@ -107,29 +85,35 @@ def error_callback(update: Update, context: CallbackContext):
             update.effective_message.text if update.effective_message else "No message",
             tb,
         )
-        key = requests.post(
-            "https://nekobin.com/api/documents", json={"content": pretty_message}
-        ).json()
+        extension = "txt"
+        url = "https://spaceb.in/api/v1/documents/"
+        try:
+            response = requests.post(
+                url, data={"content": pretty_message, "extension": extension}
+            )
+        except Exception as e:
+            return {"error": str(e)}
+        response = response.json()
         e = html.escape(f"{context.error}")
-        if not key.get("result", {}).get("key"):
+        if not response:
             with open("error.txt", "w+") as f:
                 f.write(pretty_message)
             context.bot.send_document(
-                ERROR_LOGS,
+                MESSAGE_DUMP,
                 open("error.txt", "rb"),
                 caption=f"#{context.error.identifier}\n<b>Your enemy's make an error for you, demon king:"
                 f"</b>\n<code>{e}</code>",
                 parse_mode="html",
             )
             return
-        key = key.get("result").get("key")
-        url = f"https://nekobin.com/{key}.py"
+
+        url = f"https://spaceb.in/{response['payload']['id']}"
         context.bot.send_message(
-            ERROR_LOGS,
+            MESSAGE_DUMP,
             text=f"#{context.error.identifier}\n<b>Your enemy's make an error for you, demon king:"
             f"</b>\n<code>{e}</code>",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cursed Errors", url=url)]],
+                [[InlineKeyboardButton("Flare Errors", url=url)]],
             ),
             parse_mode="html",
         )
