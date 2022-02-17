@@ -546,7 +546,7 @@ def baka(update, context):
 PHOTO = "https://telegra.ph/file/6266d4d7ce030b8a7cf2d.jpg"
 
 
-@register(pattern=("/Flare"))
+@register(pattern=("/flare"))
 async def awake(event):
     TEXT = "**♡ I,m @{BOT_USERNAME} ʀᴏʙᴏᴛ 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
