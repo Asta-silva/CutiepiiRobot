@@ -9,17 +9,15 @@ from telethon import events, Button
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
-from Cutiepii_Robot.events import register
-from Cutiepii_Robot import telethn as tbot
 from time import sleep
 from PIL import Image
 
-from Cutiepii_Robot import BOT_USERNAME
 from telegram import Bot, Chat, Message, MessageEntity, ParseMode, Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
+from Cutiepii_Robot import BOT_USERNAME
 from Cutiepii_Robot.events import register
 from Cutiepii_Robot import telethn as tbot
 from Cutiepii_Robot import dispatcher, updater
