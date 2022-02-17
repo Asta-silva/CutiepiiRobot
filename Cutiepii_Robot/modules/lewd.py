@@ -545,7 +545,7 @@ PHOTO = "https://telegra.ph/file/6266d4d7ce030b8a7cf2d.jpg"
 
 @register(pattern=("/flare"))
 async def awake(event):
-    TEXT = "**♡ I,m [Me](https://t.me/@{BOT_USERNAME}) ʀᴏʙᴏᴛ 愛** \n\n"
+    TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
     TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
     TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
