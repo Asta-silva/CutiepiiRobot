@@ -97,19 +97,18 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     # ubot_state = 'Dead' if not await app2.get_me() else 'Alive'
     buttons.add(
-        InlineKeyboardButton("Main Bot", url="https://t.me/Cutiepii_Robot"),
         InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
-**[Cutiepii 💜](https://github.com/Awesome-RJ/CutiepiiRobot):**
+**[Flare（｡>‿‿<｡ ）](https://github.com/Asta-vir/Flare-Robot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `Alive`
 **Python:** `3.9`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [UBOT](t.me/Awesome_Cutiepii)
+**Profiles:** [BOT](t.me/{BOT_USERNAME}) 
 """
     answers.append(
         InlineQueryResultArticle(
