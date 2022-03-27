@@ -8,8 +8,8 @@
          "manager",
          "Flare"
       ],   
-  "logo":    "https://telegra.ph/file/96e7b15de9062f9800306.jpg",
- "repository": "https://github.com/Asta-vir/Flare_Robot",
+  "logo":    "https://telegra.ph/file/ac41e5086929782d252ef.jpg",
+ "repository": "https://github.com/Asta-silva/Flare-Robot",
    "addons": [
       {
          "options": {
@@ -22,32 +22,22 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "2103013523:AAFf0-qeaYmaWP20pUH-_n5QcM9FLOoN2GA"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "5671039"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "4fe31100223e1167bde36342712fdbda"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
          "value": "sqldbtype://username:pw@hostname:port/db_name"
-      },
-      "BOT_ID": {
-         "description": "Get BOT_ID From From @BotFather.",
-         "required": true,
-         "value": ""
-      },
-      "BOT_USERNAME": {
-         "description": "Get BOT_USERNAME From From @BotFather.",
-         "required": true,
-         "value": ""
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
@@ -76,23 +66,23 @@
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
          "required": true,
-         "value": ""
+         "value": "V7NS1NBFEL4X24L6"
       },
 
       "TIME_API_KEY": {
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
          "required": true,
-         "value": ""
+         "value": "2AS711XS1O9B"
       },
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Eren support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "2105723446"
+         "value": "1755728237"
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": ""
+         "value": "6v5wd314_h1U6JPAO6CECrbhuzYsWoTUctXcR7GE~5tzHbNaL1rEhfdfqse6Wmx6"
       },
  
       "STRICT_GBAN": {
@@ -102,7 +92,7 @@
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": ""
+         "value": " "
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
@@ -115,19 +105,24 @@
          "value": ""
       },
       "DB_URI": {
-         "description": "Add your Db if you don't have one get it from elephantsql.com .",
+         "description": "Add your Db_URI.",
          "required": true,
-         "value": ""
+         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
+      },
+      "DATABASE_URI": {
+         "description": "Add your Db_URI.",
+         "required": true,
+         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
       },
       "DATABASE_URL": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": "Add the same db that u added above if you don't have one get if from elephantsql.com  note: DB_URI and DATABASE_URL the values of this two should be same."
+         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": ""
+         "value": "1606221784"
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
@@ -179,33 +174,41 @@
       "WALL_API": {
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
          "required": false,
-         "value": ""
+         "value": "6950f559377140a4e1594c564cdca6a3"
        },
        "MONGO_DB_URI": {
          "description": "Your Mongo Database Url, create it from https://cloud.mongodb.com/",
          "required": true,
-         "value": ""
+         "value": "mongodb+srv://Flare_DB:FreiaDb@flaredb.mqysn.mongodb.net/FlareDb?retryWrites=true&w=majority"
        }, 
        "REDIS_URI": {
          "description": "Redis Url create one from redislabs.com.",
          "required": true,
-         "value": ""
+         "value": "redis://Asta:Asta_123@redis-11259.c277.us-east-1-3.ec2.cloud.redislabs.com:11259/Asta"
        }, 
        "APP_ID": {
          "description": "API ID of 2nd telegram account if you dont have two accounts then use the same accounts API ID, but i recommend using 2nd accounts API ID",
          "required": true,
-         "value": ""
+         "value": "5671039"
       }, 
       "APP_HASH": {
          "description": " API HASH of 2nd telegram account if you dont two accounts then use the same accounts API HASH, but i recommend using 2nd accounts API HASH.",
          "required": true,
-         "value": ""
+         "value": "4fe31100223e1167bde36342712fdbda"
        }, 
        "STRING_SESSION": {
          "description": "Telethon String Session, create it from https://repl.it/@SpEcHiDe/GenerateStringSession .",
          "required": true,
-         "value": ""
+         "value": "1BVtsOH8BuyV7B8SK4fo2AFlm55w8Rz5xn591IF3_ZmbpLUF5AHQJDIxpcpo05gQ6o6tOSQ0-YNFCesgHD-ammrrl6sQqSc5L_mnxOJM5oMyUB8hD1WYLkPDeWwDnfL-S42njeP_Q91-FZYiug7DiraHzkMqGEgFNdd_L3feh-w9kcN_dORVTzbNO4b0BPZ6glMoq0nuGMsMvcIzygCJSetFzof7-LbsupQOP7innLQoivZiIWyt4kogTJlzKJw8ZChGRq-2fBHgdIyElaQtGGYYf6RL6fT0E6qmSqyVNCHrrTw7pyoSf5MBfdUK-nEldnaV6DsFy7suHCvC73A5yoQ_og5EvPmw="
       }
       
    }
 } 
+
+     
+
+      
+   
+
+
+ 
