@@ -99,7 +99,7 @@ if ENV:
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None) # From:- https://www.remove.bg/
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "") # From:- https://openweathermap.org/api
     GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None) # From:- http://genius.com/api-clients
-    MONGO_DB_URL = os.environ.get("MONGO_DB_URL", None) # MongoDB URL (From:- https://www.mongodb.com/)
+    MONGO_DB_URL = os.environ.get("MONGO_DB_URL", "mongodb+srv://FalcoGrice:Falco123@cluster0.yrqux.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") # MongoDB URL (From:- https://www.mongodb.com/)
     REDIS_URL = os.environ.get("REDIS_URL", "redis://Asta:Asta_123@redis-11259.c277.us-east-1-3.ec2.cloud.redislabs.com:11259/Asta) # REDIS URL (From:- Heraku & Redis")
     BOT_ID = os.environ.get ("BOT_ID", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
